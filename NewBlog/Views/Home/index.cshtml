@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Post>
+
+@{
+
+}
+
+<h2 class="header">Home Page</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <h3 id="name">Welcome, @System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(User.Identity.Name)</h3>
+}
+
+<div id="posts">
+    <ul id="post-list">
+        @foreach (var post in Model)
+        {
+            <li id="post-list-item">
+                <div class="container">
+                    @if (!String.IsNullOrEmpty(post.Image))
+                    {
+                        var image_path = $"/Image/{post.Image}";
+                        <img src="@image_path" width="600" />
+                    }
+                    else
+                    {
+                        <img src="~/content/static/1524445768907.jpg" width="600" />
+                    }
+
+                    <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id" class="post-link">
+                        @post.Title
+                    </a>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,26 @@
+﻿@model PostViewModel
+
+@{
+
+}
+
+<h2 class="header">Edit Post</h2>
+
+<div>
+    <form asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data" class="login-form">
+        <input asp-for="Id" type="hidden" />
+        <div>
+            <label>Title</label>
+            <input asp-for="Title" required/>
+        </div>
+        <div>
+            <label>Body</label><br />
+            <textarea asp-for="Body" id="body-input" required></textarea>
+        </div>
+        <div>
+            <label>Image</label>
+            <input asp-for="Image" required/>
+        </div>
+        <input type="submit" value="Submit" id="submit" />
+    </form>
+</div>

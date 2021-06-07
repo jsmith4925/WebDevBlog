@@ -1,0 +1,51 @@
+﻿@model Post
+
+@{
+
+}
+
+<h2 class="header"> @Model.Title</h2>
+
+@if (!String.IsNullOrEmpty(Model.Image))
+{
+    var image_path = $"/Image/{Model.Image}";
+    <div id="image">
+        <img class="post-image" src="@image_path" width="700" />
+    </div>
+}
+else
+{
+    <div id="image">
+        <img class="post-image" src="~/content/static/1524445768907.jpg"  width="700" />
+    </div>
+}
+
+<p class="post-body">@Model.Body</p>
+
+<div class="comment-section">
+
+    <div id="comments">
+        @{
+            await Html.RenderPartialAsync("_MainComment", new CommentViewModel { PostId = Model.Id, MainCommentId = 0 });
+        }
+
+        @foreach (var c in Model.MainComments)
+        {
+            <h5 class="time-stamp">@c.Created</h5>
+            <h5 class="comment">@System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(c.UserName)</h5>
+            <p class="comment">@c.Message</p>
+            <div class="sub-comment-section">
+                @foreach (var sc in c.SubComments)
+                {
+                    <h5 class="time-stamp">@sc.Created</h5>
+                    <h5 class="sub-comments">@System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(sc.UserName)</h5>
+                    <p class="sub-comment">@sc.Message</p>
+                }
+                @{
+                    await Html.RenderPartialAsync("_MainComment", new CommentViewModel { PostId = Model.Id, MainCommentId = c.Id });
+                }
+
+            </div>
+        }
+    </div>
+</div>

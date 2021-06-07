@@ -1,0 +1,285 @@
+﻿
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #ccc;
+    background-image: linear-gradient(270deg, rgb(53, 235, 235) 0%, rgb(216, 0, 221) 100%);
+    background-color: #9483de;
+}
+
+body {
+    margin: 0px;
+}
+
+div#body {
+    margin: auto;
+}
+
+div#posts{
+
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h3#name {
+    font-size: 50px;
+}
+
+ul#post-list{
+    list-style-type: none;
+    margin-right: 40px;
+}
+
+li#post-list-item{
+    /*padding: 40px 0px;*/
+    max-height: 600px;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+img {
+    border: solid 2px white;
+}
+
+.post-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 2%;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+    .post-link:hover {
+        font-size: 27px;
+        color: rgb(53, 235, 235);
+    }
+
+
+h2.header {
+    background-color: rgba(13, 13, 13, 0.86);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    padding: 15px;
+    margin: 0;
+    font-size: 30px;
+}
+
+nav {
+    height: 0px;
+}
+
+img.post-image {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 800px;
+    min-width: 600px;
+}
+
+p.post-body {
+    padding: 20px;
+    background-color: rgba(241, 241, 241, 0.75);
+    display: block;
+    margin: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 800px;
+    min-width: 600px;
+}
+
+div.comment-section {
+    margin: 0px 50px;
+    align-self: center;
+}
+
+div.sub-comment-section {
+    background-color: rgba(246, 170, 255, 0.87);
+    margin-left: 20px;
+    margin-bottom: 50px;
+    padding: 2px;
+    
+}
+
+input#Message {
+    margin-left: 11px;
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    max-width: 600px;
+    background: #f1f1f1;
+}
+
+div.post-box {
+    width: 100%;
+    height: 30px;
+    align-self: center;
+}
+
+button[type="submit"] {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(13, 13, 13, 0.80);
+    color: white;
+    padding: 7px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+h5.comment{
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0px;
+    font-size: 25px;
+}
+
+p.comment {
+    padding-left: 15px;
+    margin-top: 0px;
+}
+
+h5.sub-comments {
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0px;
+    font-size: 15px;
+}
+
+p.sub-comment {
+    padding-left: 15px;
+    margin-top: 0px;
+}
+
+h5.time-stamp {
+    float: right;
+    color: dimgrey;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0px;
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+div#comments {    
+    margin: 0px auto;
+    max-width: 500px;
+    background-color: rgba(246, 170, 255, 0.87)
+}
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(13, 13, 13, 0.00);
+    
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: rgba(13, 13, 13, 0.00);
+}
+
+form.login-form {
+    color: white;
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px 10px 10px;
+    background: rgba(100, 100, 100, 0.50);
+}
+
+    form.login-form input {
+        width: 90%;
+        height: 50px;
+        padding: 0px 5%;
+        margin: 0px;
+        margin-bottom: 2.5%;
+        border: none;
+        background-color: #fff;
+        font-family: arial;
+        font-size: 20px;
+        color: #111;
+        line-height: 50px;
+    }
+
+    form.login-form input#submit {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border: none;
+        background-color: rgb(212, 51, 215);
+        font-family: arial;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+        form.login-form input#submit:hover {
+            border: none;
+            background-color: rgb(21, 188, 188);
+        }
+
+        form.login-form input#body-input {
+            width: 100%;
+        }
+
